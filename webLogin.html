@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<style>body{
+    background-color: rgb(155, 125, 125);
+    background-image: url(../webproject/Wimages/login.jpg);
+    background-repeat:   no-repeat;
+            background-size: cover;
+}
+    div{
+
+        background-color: rgba(68, 59, 61, 0.183);
+      
+        padding: 5%;
+        text-align: left;
+        font-size: 150%;
+        width: 40%;
+        
+
+    }
+    input[type=text],input[type=password],button{
+        background-color: beige;
+        width: 90%;
+        font-size: 20px;
+        
+        
+        
+        
+    }
+    #p{
+        font-size: 30;
+        flex-grow: inherit;
+        font-family: fantasy;
+        font-style: solid oblique;
+        color:brown ;
+        
+    }#m{
+        font-size: 30;
+        flex-grow: inherit;
+        font-family: fantasy;
+        font-style: solid oblique;
+        color:rgb(184, 122, 122) ;
+    }
+   /* #r{
+        float:  right;
+        text-align: center;
+        width: 20%;
+        background-color: rgb(163, 24, 24);
+        <button type="submit"id="r" >sign-out</button>
+    }*/
+    #k{
+        float:  left;
+        text-align: center;
+        width: 20%;
+        background-color: rgb(79, 71, 196);
+       
+    }
+</style>
+<script type="text/javascript">
+function validate(){
+    var name=document.myform.name.value;
+    var password=document.myform.password.value;
+    var id=document.myform.id.value;
+    if (name==null || name==""){
+        alert("please fill your name");
+             return false;
+} 
+    
+        if (id==null || id==""){
+            alert("please fill");
+            return false;
+        
+    }
+    else if(password.length<8){
+        alert("enter correct password");
+        return false;
+
+    }
+
+}
+
+
+</script>
+<body>
+    <marquee><h1 id ="m">wel-come </h1></marquee>
+    <center>
+    <div>
+        <h1  id ="p">
+           <center>Login</center> 
+        </h1>
+    <form action="../webproject/Logincontent.html" name="myform" onsubmit=" return validate()">
+        <label>
+         Name:
+        <input type="text" type="name" name="name"></input><br><br></label>
+        <label> login id:
+        <input type="text" type="login id" name="id" ></input><br><br></label>
+        <label> password:
+        <input type="password" type="password" name ="password"></input><br><br></label>
+        <button type="submit" id="k">Submit</button>
+        
+        
+
+    </form>
+</div></center>
+
+</body>
+</html>
